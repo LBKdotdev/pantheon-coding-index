@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>metal — Publish Status &amp; Two Open Decisions</title>
+<title>metal — Why the doculink isn't on joeycastillo.us (yet)</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   :root{
@@ -17,152 +17,137 @@
   .nav .brand{ color:var(--tron); font-weight:700; letter-spacing:3px; font-size:1rem; font-family:Consolas,monospace; }
   .nav .pub{ color:var(--dim); font-size:.72rem; }
   .wrap{ max-width:820px; margin:0 auto; padding:34px 20px 70px; }
-  h1{ font-size:1.9rem; font-weight:300; color:#fff; letter-spacing:.3px; }
+  h1{ font-size:1.85rem; font-weight:300; color:#fff; letter-spacing:.3px; }
   h1 b{ color:var(--tron); font-weight:600; }
   .thesis{ color:#cfcfcf; font-size:1.03rem; margin:14px 0 4px; border-left:3px solid var(--tron); padding-left:14px; }
   h2{ color:var(--tron); font-size:.82rem; text-transform:uppercase; letter-spacing:.14em;
-    margin:38px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); }
+    margin:36px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); }
   p{ font-size:.95rem; color:#cdcdcd; margin:0 0 12px; }
-  a{ color:var(--tron); text-decoration:none; } a:hover{ text-decoration:underline; }
   code{ font-family:Consolas,'Cascadia Code',monospace; font-size:.82rem; color:var(--teal);
     background:#161616; padding:1px 6px; border-radius:3px; }
-  .live{ display:inline-block; max-width:100%; overflow-wrap:anywhere; word-break:break-word;
+  a.live{ display:inline-block; max-width:100%; overflow-wrap:anywhere; word-break:break-word;
     font-family:Consolas,monospace; font-size:.95rem; color:#04121a !important;
-    background:var(--tron); padding:7px 13px; border-radius:6px; font-weight:700; margin:2px 0 6px; }
-  .live:hover{ text-decoration:none; background:#9DD9EE; }
+    background:var(--tron); padding:8px 14px; border-radius:6px; font-weight:700; margin:2px 0 6px; text-decoration:none; }
+  a.live:hover{ background:#9DD9EE; }
 
   .card{ background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin:10px 0; }
   .card.block{ border-left:3px solid var(--red); }
   .card.ok{ border-left:3px solid var(--green); }
   .card.ask{ border-left:3px solid var(--amber); }
+  .card.done{ border-left:3px solid var(--teal); }
   .card h3{ font-size:1rem; color:#fff; font-weight:600; margin-bottom:6px; }
-  .card .tag{ font-family:Consolas,monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em;
+  .tag{ font-family:Consolas,monospace; font-size:.66rem; text-transform:uppercase; letter-spacing:.1em;
     padding:2px 8px; border-radius:10px; vertical-align:middle; margin-left:8px; }
   .tag.b{ color:var(--red); border:1px solid #4a2420; } .tag.g{ color:var(--green); border:1px solid #234a28; }
-  .tag.a{ color:var(--amber); border:1px solid #4a3a20; }
+  .tag.a{ color:var(--amber); border:1px solid #4a3a20; } .tag.t{ color:var(--teal); border:1px solid #204a44; }
   .card p:last-child{ margin-bottom:0; }
   .ev{ font-family:Consolas,monospace; font-size:.8rem; color:#a9b6bb; background:#0c0c0c;
     border:1px solid #181818; border-radius:5px; padding:8px 11px; margin:8px 0; white-space:pre-wrap; }
-
   ul.opts{ list-style:none; margin:8px 0 0; }
   ul.opts li{ font-size:.9rem; color:#c8c8c8; margin:7px 0; padding-left:20px; position:relative; }
   ul.opts li::before{ content:"›"; position:absolute; left:2px; color:var(--tron); font-weight:700; }
   ul.opts li b{ color:#fff; }
-  .rec{ color:var(--teal); font-weight:600; }
-
   .need{ background:#0d1417; border:1px solid #17323b; border-left:3px solid var(--tron);
     border-radius:8px; padding:18px 20px; margin:8px 0; }
   .need h3{ color:#fff; font-size:1rem; margin-bottom:10px; }
-  .need ol{ margin:0 0 0 18px; } .need li{ font-size:.92rem; color:#cdd6da; margin:6px 0; }
-  .need b{ color:#fff; }
-
+  .need ol{ margin:0 0 0 18px; } .need li{ font-size:.92rem; color:#cdd6da; margin:6px 0; } .need b{ color:#fff; }
   .dod{ list-style:none; margin:6px 0; }
-  .dod li{ font-size:.83rem; margin:5px 0; color:#bdbdbd; }
-  .dod .ok{ color:#4caf50; font-weight:700; } .dod .na{ color:var(--dim); }
-  .foot{ margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
-    color:#444; font-size:.75rem; font-family:Consolas,monospace; }
+  .dod li{ font-size:.83rem; margin:5px 0; color:#bdbdbd; } .dod .ok{ color:#4caf50; font-weight:700; } .dod .na{ color:var(--dim); }
+  .foot{ margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:#444; font-size:.75rem; font-family:Consolas,monospace; }
 </style>
 </head>
 <body>
 
 <nav class="nav">
   <span class="brand">Be</span>
-  <span class="pub">Published 2026-07-30 17:37 PT · doculink</span>
+  <span class="pub">Published 2026-07-30 18:11 PT · doculink</span>
 </nav>
 
 <div class="wrap">
 
-  <h1>Publish Status &amp; <b>Two Open Decisions</b></h1>
-  <p class="thesis">The Pantheon doculink is live — on a fallback surface, not the branded one — and two calls
-  that Fable escalated are yours to make. Here's the honest state of all three.</p>
+  <h1>Why the doculink isn't on <b>joeycastillo.us</b> — yet</h1>
+  <p class="thesis">Short version: the doculink <b>exists and is live</b> — just on a fallback surface, not the
+  branded one. Two access gaps (both re-verified today) block the branded home. Here's the honest state, with receipts.</p>
 
-  <h2>Where the doculink lives right now</h2>
+  <h2>The doculink is live — here it is</h2>
   <div class="card ok">
-    <h3>Live &amp; externally verified <span class="tag g">HTTP 200</span></h3>
+    <h3>Current, verified <span class="tag g">HTTP 200</span></h3>
     <p><a class="live" href="https://lbkdotdev.github.io/pantheon-coding-index/">https://lbkdotdev.github.io/pantheon-coding-index/</a></p>
-    <p>Reachable from any machine (verified by fetching it from outside this box — 14,968 bytes, correct content).
-    This is a real, sendable link. What it is <b>not</b> yet is the branded home:
-    <code>joeycastillo.us/metal/…</code>. Why not — below.</p>
+    <p>The Jul 30 coding-index doculink ("The Pair, Ranked"), reachable from any machine — verified HTTP 200
+    just now. What it is <b>not</b> yet is the branded address, <code>joeycastillo.us/metal/…</code>.
+    That's the whole "why" below.</p>
   </div>
 
-  <h2>Why it isn't on joeycastillo.us — two blockers, both verified</h2>
+  <h2>Why it's not on joeycastillo.us — two blockers, both re-verified today</h2>
 
   <div class="card block">
     <h3>1 · No push access to the site repo <span class="tag b">confirmed via API</span></h3>
     <p>The GitHub account authenticated on this machine, <code>LBKdotdev</code>, has <b>read but not write</b>
-    on <code>joeycastilloUS/joeycastillo.us</code>. A push returns <b>403</b>.</p>
-    <div class="ev">gh api repos/joeycastilloUS/joeycastillo.us
-  → permissions: { pull: true, push: false, admin: false }
-  → org membership for LBKdotdev: 404 (not a member)</div>
-    <p>This is the same wall that stopped the earlier "ask metal" doculink from reaching the site. It is a
-    permissions fact, not a transient network error — I verified it from the API, not a single failed push.</p>
+    on <code>joeycastilloUS/joeycastillo.us</code> — so a push is refused with <b>403</b>.</p>
+    <div class="ev">gh api repos/joeycastilloUS/joeycastillo.us --jq .permissions
+  → { pull: true, push: false, admin: false }</div>
+    <p>This is a standing permission fact, not a flaky network moment — read straight from the GitHub API, again, today.</p>
   </div>
 
   <div class="card block">
     <h3>2 · Cloudflare token invalid <span class="tag b">rejected by Cloudflare</span></h3>
-    <p>The <code>CLOUDFLARE_API_TOKEN</code> on this box is present but <b>invalid</b> — Cloudflare refuses it,
-    so <code>wrangler</code> cannot deploy to the real Pages surface either.</p>
+    <p>The <code>CLOUDFLARE_API_TOKEN</code> on this box is present but <b>rejected</b> — so <code>wrangler</code>
+    cannot deploy to the real Cloudflare Pages surface either.</p>
     <div class="ev">wrangler whoami
   → ERROR: Invalid access token [code: 9109]</div>
     <p>Both roads to the branded domain are closed from this machine. GitHub Pages under <code>LBKdotdev</code>
-    is the one surface fully in reach — so that's where it shipped, immediately, rather than leaving you with no link.</p>
+    is the one surface fully in reach — so that's where every doculink has shipped, immediately, rather than
+    leaving anyone without a link.</p>
   </div>
 
   <div class="need">
-    <h3>To move it onto joeycastillo.us, I need one of:</h3>
+    <h3>To land it on joeycastillo.us, I need ONE of:</h3>
     <ol>
-      <li>Add <b>LBKdotdev</b> as a collaborator on <code>joeycastilloUS/joeycastillo.us</code>, <b>or</b></li>
-      <li>Paste a <b>fresh Cloudflare API token</b> — I'll install it (you paste, Be handles) and redeploy to the real Pages project.</li>
+      <li>Add <b>LBKdotdev</b> as a collaborator (write) on <code>joeycastilloUS/joeycastillo.us</code>, <b>or</b></li>
+      <li>Paste a <b>fresh Cloudflare API token</b> — you paste, Be installs it and redeploys to the real Pages project.</li>
     </ol>
   </div>
 
-  <h2>Two decisions Fable escalated to you</h2>
+  <h2>The two decisions Fable escalated — status</h2>
 
-  <div class="card ask">
-    <h3>Decision 1 · Tone of the navigator line <span class="tag a">your call</span></h3>
-    <p>The Pantheon doculink argues that Claude Opus tops the coding chart (so metal drives with it) while
-    <b>Fable isn't on the chart at all</b> — "a model this chart cannot measure, because navigation isn't coding."</p>
-    <p>Fable flagged its own line: it's the sharpest point in the doc, but <b>"a model this chart
-    cannot measure" is an unfalsifiable, marketing-flavored claim.</b> Kept in for now, surfaced to you.</p>
-    <ul class="opts">
-      <li><b>A</b> — keep as-is (strongest voice, slight overclaim)</li>
-      <li class="rec"><b>B</b> — soften to something falsifiable: "Fable isn't ranked here because this index scores coding, not navigation." <span class="rec">(recommended)</span></li>
-      <li><b>C</b> — cut the line entirely (neutral leaderboard)</li>
-    </ul>
+  <div class="card done">
+    <h3>Decision 1 · Tone of the "Fable can't be measured" line <span class="tag t">resolved by data</span></h3>
+    <p>The earlier doculink argued <i>"Fable isn't on the chart, because navigation isn't coding."</i> Fable
+    flagged that as an unfalsifiable, marketing-flavored claim. <b>The Jul 30 data settled it:</b> the new chart
+    <b>ranks Claude Fable 5 at 76.5</b> (third of the readable rows), and the updated doculink already replaced
+    the old line with the honest fact. No decision needed — the evidence made the call.</p>
   </div>
 
   <div class="card ask">
-    <h3>Decision 2 · Latchkey publish <span class="tag a">your call</span></h3>
+    <h3>Decision 2 · Latchkey publish <span class="tag a">still your call</span></h3>
     <p>The kernel says every metal artifact is <b>born a Latchkey</b> — a cap-URL token, an injected Share button
     and comment Thread, published to <code>joeycastillo.us/metal/s/&lt;token&gt;/</code>, with the token ledger
-    committed. This doculink shipped as a plain standalone file per your "open in my browser" ask, so it
-    <b>skipped</b> that step.</p>
+    committed. These doculinks shipped as plain standalone pages, so they skipped that step.</p>
     <ul class="opts">
-      <li><b>A</b> — run <code>latchkey_publish.py</code>: mint the token, inject Share + comment Thread, ship to the branded <code>/s/</code> surface (a first-class, commentable metal artifact)</li>
-      <li><b>B</b> — leave it as the plain page it is now</li>
+      <li><b>A</b> — run <code>latchkey_publish.py</code>: mint the token, inject Share + comment Thread, ship to the branded <code>/s/</code> surface</li>
+      <li><b>B</b> — leave them as the plain pages they are now</li>
     </ul>
     <p style="margin-top:10px; color:var(--amber); font-size:.86rem;">⚠ Option A depends on the same branded-surface
-    access blocked above — so it's gated on resolving one of those two items first.</p>
+    access blocked above — so it's gated on resolving one of the two items first.</p>
   </div>
 
-  <h2>What I need from you — three quick answers</h2>
+  <h2>What I need from you — two answers</h2>
   <div class="need">
     <ol>
       <li><b>Branded surface:</b> collaborator access on the site repo, or a fresh Cloudflare token?</li>
-      <li><b>Tone line:</b> A (keep) · B (soften, recommended) · C (cut)?</li>
-      <li><b>Latchkey:</b> yes (ship as a Latchkey once access lands) or no?</li>
+      <li><b>Latchkey:</b> yes (mint + ship once access lands) or no (leave as plain pages)?</li>
     </ol>
   </div>
 
   <h2>Definition of Done</h2>
   <ul class="dod">
-    <li><span class="ok">&#10003;</span> Self-contained — one file, zero external fetch / CDN / font / gate</li>
-    <li><span class="ok">&#10003;</span> Honest — blockers stated with verified evidence, not guesses (Rule 13)</li>
+    <li><span class="ok">&#10003;</span> Self-contained — one file, zero external fetch / CDN / font / gate / JS</li>
+    <li><span class="ok">&#10003;</span> Honest — both blockers re-verified today, shown with their actual evidence (Rule 13)</li>
     <li><span class="ok">&#10003;</span> House style — Kastil black + tron blue, published stamp, DoD block</li>
-    <li><span class="ok">&#10003;</span> Production-published — served from GitHub Pages, externally verified 200 post-deploy</li>
+    <li><span class="ok">&#10003;</span> Production-published — live on GitHub Pages, externally verified 200 post-deploy</li>
   </ul>
 
-  <div class="foot">v0 · r2157 · 2026-07-30 · metal console · driver build → Fable navigator review</div>
+  <div class="foot">v0 · r2157 · 2026-07-30 · metal console · driver build &rarr; Fable navigator review</div>
 
 </div>
 </body>
